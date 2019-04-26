@@ -1,7 +1,7 @@
 import binarySearch from 'binarySearch';
 import selectionSort from 'selectionSort';
 import quickSort from 'quickSort';
-import fib from 'fib';
+import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle} from 'fib';
 
 console.log("Testing binarySearch.");
 
@@ -93,6 +93,86 @@ console.log(`Test7. ${out === -12586269025 ? "PASSED": "FAILED"}. Output: ${out}
 
 console.log("End testing fib.");
 
+console.log("Testing fibCycle.");
 
+
+out = fibCycle(0);
+console.log(`Test1. ${out === 0? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 0.`);
+
+out = fibCycle(10);
+console.log(`Test2. ${out === 55? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 55.`);
+
+out = fibCycle(20);
+console.log(`Test3. ${out === 6765? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 6765.`);
+
+out = fibCycle(50);
+console.log(`Test4. ${out === 12586269025 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 12586269025.`);
+
+out = fibCycle(-10);
+console.log(`Test5. ${out === -55 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -55.`);
+
+out = fibCycle(-20);
+console.log(`Test6. ${out === -6765 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -6765.`);
+
+out = fibCycle(-50);
+console.log(`Test7. ${out === -12586269025 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -12586269025.`);
+
+console.log("End testing fibCycle.");
+
+console.log("Testing lastNumOfFib.");
+
+out = lastNumOfFib(0);
+console.log(`Test1. ${out === 0? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 0.`);
+
+out = lastNumOfFib(10);
+console.log(`Test2. ${out === 5? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFib(20);
+console.log(`Test3. ${out === 5? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFib(50);
+console.log(`Test4. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFib(-10);
+console.log(`Test5. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFib(-20);
+console.log(`Test6. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFib(-50);
+console.log(`Test7. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+out = lastNumOfFib(-21);
+console.log(`Test7. ${out === 6 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 6.`);
+
+
+console.log("End testing lastNumOfFib.");
+
+console.log("Testing lastNumOfFibCycle.");
+
+out = lastNumOfFibCycle(0);
+console.log(`Test1. ${out === 0? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 0.`);
+
+out = lastNumOfFibCycle(10);
+console.log(`Test2. ${out === 5? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFibCycle(20);
+console.log(`Test3. ${out === 5? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFibCycle(50);
+console.log(`Test4. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFibCycle(-10);
+console.log(`Test5. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFibCycle(-20);
+console.log(`Test6. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+
+out = lastNumOfFibCycle(-50);
+console.log(`Test7. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+out = lastNumOfFibCycle(-21);
+console.log(`Test7. ${out === 6 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 6.`);
+
+
+console.log("End testing lastNumOfFibCycle.");
 
 
