@@ -1,7 +1,7 @@
 import binarySearch from 'binarySearch';
 import selectionSort from 'selectionSort';
 import quickSort from 'quickSort';
-import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle} from 'fib';
+import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle, findPeriod} from 'fib';
 
 console.log("Testing binarySearch.");
 
@@ -175,4 +175,40 @@ console.log(`Test7. ${out === 6 ? "PASSED": "FAILED"}. Output: ${out} . Expected
 
 console.log("End testing lastNumOfFibCycle.");
 
+console.log("Testing findPeriod.");
+
+let arr12 = [1,2,3,1,2,3,1,2,3];
+out = findPeriod(arr12, 1);
+console.log(`Test1. ${out === 3? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 3.`);
+arr12 = [1,1,1,1,1,1,1,1];
+
+out = findPeriod(arr12, 1);
+console.log(`Test2. ${out === 1? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 1.`);
+arr12 = [1,2,1,2,1,2,1,2];
+
+out = findPeriod(arr12, 1);
+console.log(`Test3. ${out === 2? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 2.`);
+arr12 = [1,2,3,4,5,1,2,3,4,5,1,2,3];
+
+out = findPeriod(arr12, 1);
+console.log(`Test4. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 5.`);
+arr12 = [1];
+
+out = findPeriod(arr12, 1);
+console.log(`Test5. ${out === -1 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -1.`);
+arr12 = [1,2,3,4,5];
+
+out = findPeriod(arr12, 1);
+console.log(`Test6. ${out === -1 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -1.`);
+arr12 = [1,2,3,4,5,1,2,3,4];
+
+out = findPeriod(arr12, 1);
+console.log(`Test7. ${out === -1 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -1.`);
+arr12 = [10,20,30,10,20,30];
+
+out = findPeriod(arr12, 1);
+console.log(`Test7. ${out === 3 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 3.`);
+
+
+console.log("End testing findPeriod.");
 
