@@ -1,5 +1,6 @@
 import binarySearch from 'binarySearch';
 import selectionSort from 'selectionSort';
+import quickSort from 'quickSort';
 
 console.log("Testing binarySearch.");
 
@@ -42,7 +43,28 @@ resultArr = selectionSort(arr7);
 checkArr = [30];
 console.log(`Test4. ${resultArr.length === 1 && resultArr.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: [${resultArr.toString()}]. ExpectedOutput: [${checkArr.toString()}].`);
 console.log("End testing selectionSort.");
+const arr8 = [];
+resultArr = quickSort(arr8);
+console.log(`Test1. ${resultArr.length === 0 ? "PASSED": "FAILED"}. Output: [${resultArr.toString()}]. ExpectedOutput: [].`);
 
+const arr9 = [10,9,8,4,5,6,2,8,-1];
+resultArr = quickSort(arr9);
+checkArr = [-1,2,4,5,6,8, 8,9,10];
+console.log(`Test2. ${resultArr.length === 9 && resultArr.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: [${resultArr.toString()}]. ExpectedOutput: [${checkArr.toString()}].`);
+
+const arr10 = [30,20,10,-1,-2,-5,-10,-20];
+resultArr = quickSort(arr10);
+checkArr = [-20,-10,-5,-2,-1,10,20,30];
+console.log(`Test3. ${resultArr.length === 8 && resultArr.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: [${resultArr.toString()}]. ExpectedOutput: [${checkArr.toString()}].`);
+const arr11 = [30];
+resultArr = quickSort(arr11);
+checkArr = [30];
+console.log(`Test4. ${resultArr.length === 1 && resultArr.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: [${resultArr.toString()}]. ExpectedOutput: [${checkArr.toString()}].`);
+
+console.log("Testing quickSort");
+
+
+console.log("End testing quickSort.");
 
 
 
