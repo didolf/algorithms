@@ -2,6 +2,7 @@ import binarySearch from 'binarySearch';
 import selectionSort from 'selectionSort';
 import quickSort from 'quickSort';
 import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle, findPeriod, findFibMod} from 'fib';
+import getGCD from 'getGCD';
 
 console.log("Testing binarySearch.");
 
@@ -225,3 +226,18 @@ console.log(`Test4. ${out == 34 % 2? "PASSED": "FAILED"}. Output: ${out} . Expec
 
 console.log("End testing findFibMod.");
 
+console.log("Testing getGCD.");
+
+out = getGCD(1, 2);
+console.log(`Test1. ${out === 1 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${1}.`);
+
+out = getGCD(1, 20);
+console.log(`Test1. ${out === 1 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${1}.`);
+
+out = getGCD(100, 90);
+console.log(`Test1. ${out === 10 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${10}.`);
+
+out = getGCD(25, 15);
+console.log(`Test1. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${5}.`);
+
+console.log("End testing getGCD.");
