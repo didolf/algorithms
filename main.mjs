@@ -1,6 +1,7 @@
 import binarySearch from 'binarySearch';
 import selectionSort from 'selectionSort';
 import quickSort from 'quickSort';
+import fib from 'fib';
 
 console.log("Testing binarySearch.");
 
@@ -65,6 +66,32 @@ console.log("Testing quickSort");
 
 
 console.log("End testing quickSort.");
+
+console.log("Testing fib.");
+
+let out;
+out = fib(0);
+console.log(`Test1. ${out === 0? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 0.`);
+
+out = fib(10);
+console.log(`Test2. ${out === 55? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 55.`);
+
+out = fib(20);
+console.log(`Test3. ${out === 6765? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 6765.`);
+
+out = fib(50);
+console.log(`Test4. ${out === 12586269025 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: 12586269025.`);
+
+out = fib(-10);
+console.log(`Test5. ${out === -55 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -55.`);
+
+out = fib(-20);
+console.log(`Test6. ${out === -6765 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -6765.`);
+
+out = fib(-50);
+console.log(`Test7. ${out === -12586269025 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: -12586269025.`);
+
+console.log("End testing fib.");
 
 
 
