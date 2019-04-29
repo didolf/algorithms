@@ -5,6 +5,7 @@ import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle, findPeriod, findFibMod} 
 import getGCD from 'getGCD';
 import findMinPoints from 'findMinPoints';
 import continuousBackpack from 'continuousBackpack';
+import findMaxSum from 'findMaxSum';
 
 console.log("Testing binarySearch.");
 
@@ -274,4 +275,17 @@ out = continuousBackpack(200,[[60,200]]);
 checkArr = 60;
 console.log(`Test3. ${out.toString() === checkArr.toFixed(3) ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr.toFixed(3)}.`);
 
+console.log("End testing continuousBackpack.");
+
+console.log("Testing continuousBackpack.");
+
+out = continuousBackpack(200,[[60,200]]);
+for (let i = 1; i < 10000; i++)
+{
+    if (findMaxSum(i).reduce((sum, item) => sum += item, 0) !== i)
+    {
+        console.log(`Test ${i}. FAILED.`);
+        break;
+    }
+}
 console.log("End testing continuousBackpack.");
