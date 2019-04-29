@@ -3,6 +3,7 @@ import selectionSort from 'selectionSort';
 import quickSort from 'quickSort';
 import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle, findPeriod, findFibMod} from 'fib';
 import getGCD from 'getGCD';
+import findMinPoints from 'findMinPoints';
 
 console.log("Testing binarySearch.");
 
@@ -241,3 +242,21 @@ out = getGCD(25, 15);
 console.log(`Test1. ${out === 5 ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${5}.`);
 
 console.log("End testing getGCD.");
+
+console.log("Testing findMinPoints.");
+
+out = findMinPoints(3,[[1,3], [2,5],[0,2]]);
+checkArr = [2];
+console.log(`Test1. ${out.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr}.`);
+
+out = findMinPoints(1,[[1,3]]);
+checkArr = [3];
+console.log(`Test2. ${out.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr}.`);
+
+out = findMinPoints(4,[[1, 2], [3, 4], [5,6], [7,8]]);
+checkArr = [2,4,6,7];
+console.log(`Test3. ${out.toString() === checkArr.toString() ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr}.`);
+
+console.log("End testing findMinPoints.");
+
+
