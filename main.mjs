@@ -6,6 +6,7 @@ import getGCD from 'getGCD';
 import findMinPoints from 'findMinPoints';
 import continuousBackpack from 'continuousBackpack';
 import findMaxSum from 'findMaxSum';
+import huffmanCodeToStr from 'huffmanCodeToStr';
 
 console.log("Testing binarySearch.");
 
@@ -289,3 +290,11 @@ for (let i = 1; i < 10000; i++)
     }
 }
 console.log("End testing continuousBackpack.");
+
+
+console.log("Testing huffmanCodeToStr.");
+
+/**
+ * НАПИСАТЬ ТЕСТЫ
+ */
+console.log("End testing huffmanCodeToStr.");
