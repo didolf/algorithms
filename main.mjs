@@ -4,6 +4,7 @@ import quickSort from 'quickSort';
 import fibCycle, {fib, lastNumOfFib, lastNumOfFibCycle, findPeriod, findFibMod} from 'fib';
 import getGCD from 'getGCD';
 import findMinPoints from 'findMinPoints';
+import continuousBackpack from 'continuousBackpack';
 
 console.log("Testing binarySearch.");
 
@@ -260,3 +261,17 @@ console.log(`Test3. ${out.toString() === checkArr.toString() ? "PASSED": "FAILED
 console.log("End testing findMinPoints.");
 
 
+console.log("Testing continuousBackpack.");
+out = continuousBackpack(30,[[60,30], [50,50],[120,240]]);
+checkArr = 60;
+console.log(`Test1. ${out.toString() === checkArr.toFixed(3) ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr.toFixed(3)}.`);
+
+out = continuousBackpack(300,[[60,30], [50,50],[120,240]]);
+checkArr = 110 + 0.5 * 220;
+console.log(`Test2. ${out.toString() === checkArr.toFixed(3) ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr.toFixed(3)}.`);
+
+out = continuousBackpack(200,[[60,200]]);
+checkArr = 60;
+console.log(`Test3. ${out.toString() === checkArr.toFixed(3) ? "PASSED": "FAILED"}. Output: ${out} . ExpectedOutput: ${checkArr.toFixed(3)}.`);
+
+console.log("End testing continuousBackpack.");
